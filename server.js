@@ -25,7 +25,16 @@ app.post('/',function(req,res){
     });
 });
 
+//Fetching data from MongoDB
 
+app.get('/',function(req,res){
+    User.find({},function(err,users){
+        if(err){
+            throw err;
+        }
+        res.json(users);
+    });
+});
 
 
 app.listen(8080,function(err){
