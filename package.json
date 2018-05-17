@@ -1,0 +1,25 @@
+{
+  "name": "node_mongo_postman",
+  "version": "1.0.0",
+  "description": "CURD with MongoDB and Express JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ip11/node_mongo_postman.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "crud",
+    "mongodb"
+  ],
+  "author": "prashanthteja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ip11/node_mongo_postman/issues"
+  },
+  "homepage": "https://github.com/ip11/node_mongo_postman"
+}
