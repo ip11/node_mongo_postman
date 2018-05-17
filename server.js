@@ -36,6 +36,17 @@ app.get('/',function(req,res){
     });
 });
 
+//Deleting data from MongoDB
+
+app.delete('/:id',function(req,res){
+    User.remove({email:req.params.id},function(err){
+        if(err){
+            throw err;
+        }
+        res.json({"Status":"Successfully Deleted"});
+    });
+});
+
 
 app.listen(8080,function(err){
     if(err){
