@@ -70,6 +70,29 @@ app.put('/:id',function(req,res){
 });
 
 
+//Updating Data using POST Method
+
+
+app.post('/:id',function(req,res){
+    User.findById(req.params.id,function(err,user){
+        if(err){
+            throw err;
+        }
+        user.name = req.body.name;
+        user.email = req.body.email;
+        user.save(function(err){
+            if(err){
+                throw err;
+            }
+            res.json(user); // Gives response in JSON to Postman
+            console.log("Data Updated using POST method Successfully"); //Updates in the local server console
+
+        });
+    });
+});
+
+
+
 app.listen(8080,function(err){
     if(err){
         throw err;
