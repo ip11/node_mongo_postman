@@ -49,6 +49,8 @@ app.delete('/:id',function(req,res){
 
 //Updating data
 
+
+
 app.put('/:id',function(req,res){
     User.findById(req.params.id,function(err,user){
         if(err){
