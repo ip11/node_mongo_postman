@@ -62,7 +62,8 @@ app.put('/:id',function(req,res){
             if(err){
                 throw err;
             }
-            res.json(user);
+            res.json(user); // Gives response in JSON to Postman
+            console.log("Data Updated Successfully"); //Updates in the local server console
 
         });
     });
